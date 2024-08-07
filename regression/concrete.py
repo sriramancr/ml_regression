@@ -115,8 +115,8 @@ def predictprice():
 # calling each function based on the click value
 # ==============================================
 # main menu settings
-options=[":house:",":memo:",":lower_left_fountain_pen:",":red_circle:"]
-captions=['Home','Dataset',"Regression Analysis","Close Application"]
+options=[":house:",":memo:",":lower_left_fountain_pen:"]     # ,":red_circle:"]
+captions=['Home','Dataset',"Regression Analysis"]            # ,"Close Application"]
 nav = st.sidebar.radio("Select Option",options,captions=captions)
 ndx = options.index(nav)
 
@@ -129,6 +129,7 @@ if (ndx==1):
 if (ndx==2):
     predictprice()
 
+'''
 if (ndx==3):
     st.header("Close Application")
     st.divider()
@@ -141,10 +142,9 @@ if (ndx==3):
     if btn_close:    
         with (st.spinner("Closing application ...")):
             time.sleep(2)
-                
             import keyboard,psutil
-            
             keyboard.press_and_release('ctrl+w')
             pid = os.getpid()
             p = psutil.Process(pid)
             p.terminate()
+'''
