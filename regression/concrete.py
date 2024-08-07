@@ -45,7 +45,7 @@ def dataset():
     
     st.header("Dataset")
     # file="D:/gitbuild/bosch/concrete.csv"
-    file = "/regression/concrete.csv"
+    file = "concrete.csv"
     
     data = pd.read_csv(file)
     st.dataframe(data)
